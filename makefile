@@ -1,3 +1,5 @@
+make up: build run
+
 build:
 	@docker build -t halloserver .
 
