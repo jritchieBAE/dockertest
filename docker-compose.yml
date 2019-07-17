@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  server:
+    image: "halloserver"
+    ports:
+      - "8080:8080"
+    command: -server
+
+  client:
+    image: "halloserver"
+    command: -address server
+    links:
+        - server:server
